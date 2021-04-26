@@ -48,7 +48,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="gqw-4H-TRC">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="RLt-v8-bPO">
                             <connections>
-                                <segue destination="hV2-Sl-mTg" kind="show" identifier="segue" id="cLs-EF-52U"/>
+                                <segue destination="hV2-Sl-mTg" kind="show" identifier="AddItem" id="est-Gg-HSv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -60,7 +60,7 @@
         <!--Add Item-->
         <scene sceneID="Tz6-87-9Xq">
             <objects>
-                <tableViewController id="hV2-Sl-mTg" customClass="AddItemTableViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hV2-Sl-mTg" customClass="AddItemViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="2M8-uV-dKq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

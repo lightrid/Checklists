@@ -44,8 +44,7 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
     }
     
     override func tableView(_ tableView: UITableView,
-                            cellForRowAt indexPath: IndexPath) ->
-    UITableViewCell {
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: "ChecklistItem",
             for: indexPath)
@@ -78,10 +77,11 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
     }
     
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
+        let label = cell.viewWithTag(1001) as! UILabel
         if item.checked {
-            cell.accessoryType = .checkmark
+            label.text = "✓"
         } else {
-            cell.accessoryType = .none
+            label.text = ""
         }
     }
     
@@ -90,8 +90,7 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
         label.text = item.text
     }
     // MARK:- Add Item ViewController Delegates
-    func addItemViewControllerDidCancel(
-        _ controller: AddItemViewController) {
+    func addItemViewControllerDidCancel(_ controller: AddItemViewController) {
         navigationController?.popViewController(animated:true)
     }
     

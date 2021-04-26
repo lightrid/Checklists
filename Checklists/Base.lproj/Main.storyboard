@@ -48,7 +48,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="gqw-4H-TRC">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="RLt-v8-bPO">
                             <connections>
-                                <segue destination="hV2-Sl-mTg" kind="show" id="cLs-EF-52U"/>
+                                <segue destination="hV2-Sl-mTg" kind="show" identifier="segue" id="cLs-EF-52U"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -75,7 +75,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of the Item" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAp-RE-ehy">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of the Item" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QAp-RE-ehy">
                                                     <rect key="frame" x="5" y="0.0" width="365" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -107,7 +107,7 @@
                                 <action selector="cancel" destination="hV2-Sl-mTg" id="ZPr-pe-kdu"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="s0m-Ra-blB">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="s0m-Ra-blB">
                             <connections>
                                 <action selector="done" destination="hV2-Sl-mTg" id="EKT-Ko-H70"/>
                             </connections>

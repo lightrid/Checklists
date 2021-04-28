@@ -13,9 +13,13 @@ class ChecklistItem: Equatable, Encodable, Decodable {
     }
     
     
-    var text = ""
-    var checked = false
+    var text: String
+    var checked: Bool
     
+    init() {
+        self.text = ""
+        self.checked = false
+    }
     func toggleChecked() {
         checked.toggle()
     }

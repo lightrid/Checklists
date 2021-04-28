@@ -108,6 +108,13 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
         if segue.identifier == "AddItem" {
             let controller = segue.destination as! AddItemViewController
             controller.delegate = self
+        } else if segue.identifier == "EditItem" {
+            let controller = segue.destination as! AddItemViewController
+            controller.delegate = self
+            controller.itemToEdit = items[indexPath.row]
+//            if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
+//                controller.itemToEdit = items[indexPath.row]
+//            }
         }
     }
 }

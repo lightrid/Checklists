@@ -50,6 +50,9 @@
                                         <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="lJI-yW-Li0" secondAttribute="trailing" id="qTS-uy-iOY"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hV2-Sl-mTg" kind="show" identifier="EditItem" trigger="accessoryAction" id="7f0-uc-nmi"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -153,6 +156,9 @@
             <point key="canvasLocation" x="-580" y="-267.61619190404798"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7f0-uc-nmi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

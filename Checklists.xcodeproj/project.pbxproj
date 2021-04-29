@@ -15,6 +15,7 @@
 		B73902C22635E1B8005225BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B73902C02635E1B8005225BB /* Main.storyboard */; };
 		B73902C42635E1BA005225BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B73902C32635E1BA005225BB /* Assets.xcassets */; };
 		B73902C72635E1BA005225BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B73902C52635E1BA005225BB /* LaunchScreen.storyboard */; };
+		B7575A4F263B4BB700B8F484 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7575A4E263B4BB700B8F484 /* AllListsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B73902C32635E1BA005225BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B73902C62635E1BA005225BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B73902C82635E1BA005225BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7575A4E263B4BB700B8F484 /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				B73902C82635E1BA005225BB /* Info.plist */,
 				B738C02A2636D44900C18204 /* ChecklistItem.swift */,
 				B738C02D263717F200C18204 /* ItemDetailViewController.swift */,
+				B7575A4E263B4BB700B8F484 /* AllListsViewController.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				B73902BF2635E1B8005225BB /* ChecklistViewController.swift in Sources */,
 				B738C02E263717F200C18204 /* ItemDetailViewController.swift in Sources */,
+				B7575A4F263B4BB700B8F484 /* AllListsViewController.swift in Sources */,
 				B73902BB2635E1B8005225BB /* AppDelegate.swift in Sources */,
 				B73902BD2635E1B8005225BB /* SceneDelegate.swift in Sources */,
 				B738C02B2636D44900C18204 /* ChecklistItem.swift in Sources */,

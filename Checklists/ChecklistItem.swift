@@ -12,7 +12,6 @@ class ChecklistItem: Equatable, Encodable, Decodable {
         lhs.text == rhs.text
     }
     
-    
     var text: String
     var checked: Bool
     
@@ -20,6 +19,7 @@ class ChecklistItem: Equatable, Encodable, Decodable {
         self.text = ""
         self.checked = false
     }
+    
     func toggleChecked() {
         checked.toggle()
     }

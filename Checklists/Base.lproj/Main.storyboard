@@ -85,10 +85,16 @@
                             <outlet property="delegate" destination="22b-qE-jJh" id="sKu-2Q-5Mh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="aEA-o7-Kb3"/>
+                    <navigationItem key="navigationItem" title="Checklists" id="aEA-o7-Kb3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="d08-bK-32a">
+                            <connections>
+                                <segue destination="pIy-BJ-EBl" kind="show" identifier="AddChecklist" id="CkU-As-ZA0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="zf6-k7-4ry" kind="show" identifier="ShowChecklist" id="yEg-lk-kjj"/>
-                        <segue destination="pIy-BJ-EBl" kind="show" id="NJW-n0-nfK"/>
+                        <segue destination="pIy-BJ-EBl" kind="show" identifier="EditChecklist" id="NJW-n0-nfK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dr-v2-jwh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -98,7 +104,7 @@
         <!--Add Checklist-->
         <scene sceneID="Iuw-0V-ss0">
             <objects>
-                <tableViewController id="pIy-BJ-EBl" customClass="ListDetailViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ListDetailViewController" id="pIy-BJ-EBl" customClass="ListDetailViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="8nY-b6-Ezr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,6 +252,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="7f0-uc-nmi"/>
+        <segue reference="NJW-n0-nfK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

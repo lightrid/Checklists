@@ -167,7 +167,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="Kui-JM-lBZ" secondAttribute="trailing" constant="8" id="JFP-xL-1hx"/>
                                                 <constraint firstItem="qej-x2-pWf" firstAttribute="centerY" secondItem="Kui-JM-lBZ" secondAttribute="centerY" id="Ph2-wh-N87"/>
                                                 <constraint firstItem="qej-x2-pWf" firstAttribute="leading" secondItem="nnb-60-PAe" secondAttribute="leading" constant="16" id="h8t-Qj-hq9"/>
-                                                <constraint firstItem="Kui-JM-lBZ" firstAttribute="leading" secondItem="qej-x2-pWf" secondAttribute="trailing" constant="247" id="uPf-86-S13"/>
+                                                <constraint firstItem="Kui-JM-lBZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="qej-x2-pWf" secondAttribute="trailing" constant="247" id="uPf-86-S13"/>
                                                 <constraint firstItem="Kui-JM-lBZ" firstAttribute="top" secondItem="nnb-60-PAe" secondAttribute="top" constant="4.5" id="vgp-1C-STU"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -258,14 +258,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S97-in-ntd">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S97-in-ntd">
                                                     <rect key="frame" x="319" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="shoudRemindToggled:" destination="hV2-Sl-mTg" eventType="valueChanged" id="Lhc-YI-PGX"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="S97-in-ntd" secondAttribute="trailing" constant="22" id="0GR-Wv-o9E"/>
                                                 <constraint firstItem="aSu-OS-uVj" firstAttribute="leading" secondItem="jr8-pc-uM3" secondAttribute="leadingMargin" id="7Hv-gj-0B0"/>
-                                                <constraint firstItem="S97-in-ntd" firstAttribute="leading" secondItem="aSu-OS-uVj" secondAttribute="trailing" constant="213" id="Vzm-oK-eup"/>
+                                                <constraint firstItem="S97-in-ntd" firstAttribute="leading" relation="lessThanOrEqual" secondItem="aSu-OS-uVj" secondAttribute="trailing" constant="213" id="Vzm-oK-eup"/>
                                                 <constraint firstItem="aSu-OS-uVj" firstAttribute="centerY" secondItem="S97-in-ntd" secondAttribute="centerY" id="mcr-WR-pSm"/>
                                                 <constraint firstItem="S97-in-ntd" firstAttribute="top" secondItem="jr8-pc-uM3" secondAttribute="top" constant="6" id="yy5-64-DBr"/>
                                             </constraints>

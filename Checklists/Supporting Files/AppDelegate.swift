@@ -6,17 +6,23 @@
 //
 
 import UIKit
+import UserNotifications
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    //var window: UIWindow?
-   // let dataModel = DataModel()
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        let navigationController = window?.rootViewController as! UINavigationController
-//        let controller = navigationController.viewControllers[0] as! AllListsViewController
-//        controller.dataModel = dataModel
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            if granted {
+                print("We have permision")
+            } else {
+                print("Permision denied")
+            }
+        }
         return true
     }
 
@@ -28,11 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
     func applicationDidEnterBackground(_ application: UIApplication) {
-        //saveData()
+       
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        //saveData()
+       
     }
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
@@ -43,9 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Helper Methods
     
-    func saveData() {
-        //dataModel.saveChecklist()
-    }
+    
 
 }
 

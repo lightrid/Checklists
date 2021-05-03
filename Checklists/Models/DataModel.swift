@@ -24,6 +24,13 @@ class DataModel {
         handleFirstTime()
     }
     
+    func sortChecklist() {
+        //lists.sort(by: {$0.name < $1.name})
+        lists.sort(by: {list1, list2 in
+                    return list1.name.localizedStandardCompare(list2.name)
+                        == .orderedAscending})
+    }
+    
     func documentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory,
                                              in: .userDomainMask)
@@ -50,6 +57,7 @@ class DataModel {
             let decoder = PropertyListDecoder()
             do {
                 lists = try decoder.decode([Checklist].self, from: data)
+                sortChecklist()
             } catch {
                 print("Error decoding list array:\(error.localizedDescription)")
             }

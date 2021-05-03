@@ -16,6 +16,7 @@
 		B73902C42635E1BA005225BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B73902C32635E1BA005225BB /* Assets.xcassets */; };
 		B73902C72635E1BA005225BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B73902C52635E1BA005225BB /* LaunchScreen.storyboard */; };
 		B7575A4F263B4BB700B8F484 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7575A4E263B4BB700B8F484 /* AllListsViewController.swift */; };
+		B77A98E12640556A00B5DF29 /* IconPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A98E02640556A00B5DF29 /* IconPickerViewController.swift */; };
 		B7A69266263F3DF500FA0325 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A69265263F3DF500FA0325 /* DataModel.swift */; };
 		B7B3CEC2263C1BA100ADA894 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3CEC1263C1BA100ADA894 /* Checklist.swift */; };
 		B7B3CEC5263C2BBF00ADA894 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3CEC4263C2BBF00ADA894 /* ListDetailViewController.swift */; };
@@ -33,6 +34,7 @@
 		B73902C62635E1BA005225BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B73902C82635E1BA005225BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7575A4E263B4BB700B8F484 /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
+		B77A98E02640556A00B5DF29 /* IconPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerViewController.swift; sourceTree = "<group>"; };
 		B7A69265263F3DF500FA0325 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		B7B3CEC1263C1BA100ADA894 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		B7B3CEC4263C2BBF00ADA894 /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
@@ -68,21 +70,62 @@
 		B73902B92635E1B8005225BB /* Checklists */ = {
 			isa = PBXGroup;
 			children = (
-				B73902BA2635E1B8005225BB /* AppDelegate.swift */,
-				B73902BC2635E1B8005225BB /* SceneDelegate.swift */,
-				B73902BE2635E1B8005225BB /* ChecklistViewController.swift */,
-				B73902C02635E1B8005225BB /* Main.storyboard */,
-				B73902C32635E1BA005225BB /* Assets.xcassets */,
-				B73902C52635E1BA005225BB /* LaunchScreen.storyboard */,
-				B73902C82635E1BA005225BB /* Info.plist */,
-				B738C02A2636D44900C18204 /* ChecklistItem.swift */,
-				B738C02D263717F200C18204 /* ItemDetailViewController.swift */,
-				B7575A4E263B4BB700B8F484 /* AllListsViewController.swift */,
-				B7B3CEC1263C1BA100ADA894 /* Checklist.swift */,
-				B7B3CEC4263C2BBF00ADA894 /* ListDetailViewController.swift */,
-				B7A69265263F3DF500FA0325 /* DataModel.swift */,
+				B77A98D9264013EA00B5DF29 /* Controllers */,
+				B77A98D8264013E100B5DF29 /* Models */,
+				B77A98DA2640140100B5DF29 /* Resources */,
+				B77A98DD2640148D00B5DF29 /* Supporting Files */,
+				B77A98DB2640146600B5DF29 /* View */,
 			);
 			path = Checklists;
+			sourceTree = "<group>";
+		};
+		B77A98D8264013E100B5DF29 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7B3CEC1263C1BA100ADA894 /* Checklist.swift */,
+				B738C02A2636D44900C18204 /* ChecklistItem.swift */,
+				B7A69265263F3DF500FA0325 /* DataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B77A98D9264013EA00B5DF29 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7575A4E263B4BB700B8F484 /* AllListsViewController.swift */,
+				B73902BE2635E1B8005225BB /* ChecklistViewController.swift */,
+				B738C02D263717F200C18204 /* ItemDetailViewController.swift */,
+				B7B3CEC4263C2BBF00ADA894 /* ListDetailViewController.swift */,
+				B77A98E02640556A00B5DF29 /* IconPickerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B77A98DA2640140100B5DF29 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B73902C32635E1BA005225BB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B77A98DB2640146600B5DF29 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B73902C52635E1BA005225BB /* LaunchScreen.storyboard */,
+				B73902C02635E1B8005225BB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B77A98DD2640148D00B5DF29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B73902BA2635E1B8005225BB /* AppDelegate.swift */,
+				B73902C82635E1BA005225BB /* Info.plist */,
+				B73902BC2635E1B8005225BB /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +201,7 @@
 				B73902BF2635E1B8005225BB /* ChecklistViewController.swift in Sources */,
 				B738C02E263717F200C18204 /* ItemDetailViewController.swift in Sources */,
 				B7575A4F263B4BB700B8F484 /* AllListsViewController.swift in Sources */,
+				B77A98E12640556A00B5DF29 /* IconPickerViewController.swift in Sources */,
 				B73902BB2635E1B8005225BB /* AppDelegate.swift in Sources */,
 				B73902BD2635E1B8005225BB /* SceneDelegate.swift in Sources */,
 				B738C02B2636D44900C18204 /* ChecklistItem.swift in Sources */,
@@ -312,7 +356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y6989TCTS;
-				INFOPLIST_FILE = Checklists/Info.plist;
+				INFOPLIST_FILE = "Checklists/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -332,7 +376,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y6989TCTS;
-				INFOPLIST_FILE = Checklists/Info.plist;
+				INFOPLIST_FILE = "Checklists/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

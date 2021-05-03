@@ -7,7 +7,8 @@
 
 import UIKit
 
-class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate{
+class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate,
+                              UINavigationControllerDelegate {
     
     let cellIdentifier = "ChecklistCell"
     
@@ -18,7 +19,17 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.delegate = self
+        
+        let index = dataModel.indexOfSelectedChecklist
+        if index >= 0 && index < dataModel.lists.count {
+            let checklist = dataModel.lists[index]
+            performSegue(withIdentifier: "ShowChecklist", sender: checklist)
+        }
+    }
     // MARK: - Table view data source
 
 
@@ -44,8 +55,11 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     
     override func tableView(_ tableView: UITableView,
                             didSelectRowAt indexPath: IndexPath) {
+        dataModel.indexOfSelectedChecklist = indexPath.row
+
         let checklist = dataModel.lists[indexPath.row]
         performSegue(withIdentifier: "ShowChecklist", sender: checklist)
+        
     }
     
     override func tableView(_ tableView: UITableView,
@@ -109,7 +123,12 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
 
     }
     
-    // MARK: - Data Saving
+    // MARK: - Navigation Controller Delegates
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if viewController === self {
+            dataModel.indexOfSelectedChecklist = -1
+        }
+    }
     
     
 }

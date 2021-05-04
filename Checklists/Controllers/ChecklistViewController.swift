@@ -14,7 +14,6 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = checklist.name
     }
     
@@ -70,8 +69,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     
     func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
         let label = cell.viewWithTag(1000) as! UILabel
-        //label.text = item.text
-        label.text = "\(item.itemID): \(item.text)"
+        label.text = item.text
     }
     // MARK:- Add Item ViewController Delegates
     func itemDetailViewControllerDidCancel(_ controller: ItemDetailViewController) {
